@@ -1,7 +1,6 @@
-from links.models import Link
-from links.serializers import LinkSerializer
+from .models import Link
+from .serializers import LinkSerializer
 from rest_framework.generics import CreateAPIView, DestroyAPIView, ListAPIView, RetrieveAPIView, UpdateAPIView
-
 
 # Create your views here.
 class PostListApi(ListAPIView):

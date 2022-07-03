@@ -1,8 +1,6 @@
 from django.urls import path
-from . import views
-from rest_framework.routers import DefaultRouter
+from links import views
 
-router = DefaultRouter()
 
 app_name = "links"
 
@@ -11,6 +9,6 @@ urlpatterns = [
     path("update/<int:pk>", views.PostUpdateApi.as_view(), name="api_update"),
     path("delete/<int:pk>", views.PostDeleteApi.as_view(), name="api_delete"),
     path("", views.PostListApi.as_view(), name="api_list"),
-] + router.urls
+]
 
 
